@@ -1,4 +1,4 @@
-import User from './test'
+import User from './user'
 
 // 增
 const user = {
@@ -15,7 +15,7 @@ const insertMethods = async () => {
 
 // 查
 const findMethods = async () => {
-  const result = await User.find()
+  const result = await  User.find()
   console.log(result)
 }
 
