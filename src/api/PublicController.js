@@ -13,11 +13,11 @@ class PublicController {
       ignoreChars: '0o1il',
       color: true,
       noise: Math.floor(Math.random() * 5),
-      width: 150,
+      width: 100,
       height: 38,
     })
-    // 设置图片验证码的超时时间是10分钟
-    setValue(body.sid, newCaptca.text,60*10);
+    // 设置图片验证码的超时时间是一天
+    setValue(body.sid, newCaptca.text,60*10*24);
     // console.log(newCaptca)
     ctx.body = {
       code: 200,

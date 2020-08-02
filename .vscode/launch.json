@@ -15,7 +15,7 @@
         "run-script",
         "dev"
       ],
-      "port": 6798
+      "port": 9229
     },
     {
       "type": "node",

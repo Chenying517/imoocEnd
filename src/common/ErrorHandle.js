@@ -7,7 +7,13 @@ export default (ctx, next) => {
         message:'Protected resource, use Authorization header to get access\n'
       }
     } else {
-      throw err;
+      debugger
+      ctx.status = err.status || 500
+      ctx.body = Object.assign({
+        code: ctx.status,
+        msg: err.message,
+        stack: err.stack
+      }, process.env.NODE_ENV == 'development' ? {stack:err.stack}:'') 
     }
   });
 }
